@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from DjangoProject3.views import ImageClassificationView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+path('api/classify/', ImageClassificationView.as_view(), name='classify'),
 ]
